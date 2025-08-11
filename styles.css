@@ -1,0 +1,75 @@
+
+/* styles.css - Bold colorful aesthetic */
+:root{
+  --primary:#FF6B35;
+  --accent:#FFD166;
+  --bg:#ffffff;
+  --text:#222;
+  --overlay: rgba(0,0,0,0.45);
+  --card-bg: rgba(255,255,255,0.9);
+  --rounded: 16px;
+  --shadow: 0 8px 24px rgba(0,0,0,0.12);
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);line-height:1.6}
+.header{
+  background: linear-gradient(90deg,var(--primary), #ff9a76);
+  padding:32px 24px;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.header .brand{font-size:24px;font-weight:700}
+.nav a{color:white;margin-left:16px;text-decoration:none;font-weight:600}
+.container{max-width:1100px;margin:32px auto;padding:0 20px}
+.hero{
+  background:linear-gradient(180deg, rgba(255,255,255,0.0), rgba(255,255,255,0.0));
+  padding:48px;border-radius:12px;display:flex;gap:24px;align-items:center;
+}
+.card{background:var(--card-bg);padding:20px;border-radius:12px;box-shadow:var(--shadow)}
+.home-cta{display:flex;flex-direction:column;gap:12px}
+.btn{
+  display:inline-block;padding:12px 20px;border-radius:12px;font-weight:700;text-decoration:none;
+  background:var(--primary);color:white;
+  box-shadow:0 6px 16px rgba(255,107,53,0.24)
+}
+
+.about-bg{
+  min-height:70vh;
+  background-image: url('assets/about-bg.jpg');
+  background-size:cover;
+  background-position:center;
+  position:relative;
+  display:flex;
+  align-items:center;
+  color:white;
+}
+.about-overlay{
+  position:absolute;inset:0;background:var(--overlay);
+}
+.about-content{
+  position:relative;z-index:2;max-width:900px;margin:60px auto;padding:40px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  backdrop-filter: blur(4px);
+}
+.section-title{font-size:28px;margin-bottom:12px;font-weight:800}
+.padded{padding:24px}
+.donations{
+  background-image: repeating-linear-gradient(45deg, #f8f8f8 0 10px, #ffffff 10px 20px);
+  padding:48px;border-radius:12px;text-align:center;
+}
+.currency-bg{
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><text x="10" y="40" font-size="40" fill="#eee">₦$€£</text></svg>');
+  background-repeat: repeat;
+  background-size: 160px;
+  padding:40px;border-radius:12px;
+}
+.contact-form input, .contact-form textarea{
+  width:100%;padding:12px;margin:8px 0;border-radius:8px;border:1px solid #ddd;font-size:14px
+}
+.footer{padding:20px;text-align:center;color:#666;font-size:14px;margin-top:24px}
+@media (max-width:800px){
+  .hero{flex-direction:column}
+  .nav{display:none}
+}
