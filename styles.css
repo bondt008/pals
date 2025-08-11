@@ -1,5 +1,4 @@
 
-/* styles.css - Bold colorful aesthetic */
 :root{
   --primary:#FF6B35;
   --accent:#FFD166;
@@ -20,6 +19,7 @@ body{background:var(--bg);color:var(--text);line-height:1.6}
   display:flex;
   justify-content:space-between;
   align-items:center;
+  position: relative;
 }
 .header .brand{font-size:24px;font-weight:700}
 .nav a{color:white;margin-left:16px;text-decoration:none;font-weight:600}
@@ -69,7 +69,28 @@ body{background:var(--bg);color:var(--text);line-height:1.6}
   width:100%;padding:12px;margin:8px 0;border-radius:8px;border:1px solid #ddd;font-size:14px
 }
 .footer{padding:20px;text-align:center;color:#666;font-size:14px;margin-top:24px}
+
+/* Mobile Menu */
+.menu-toggle {
+  display:none;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
 @media (max-width:800px){
   .hero{flex-direction:column}
-  .nav{display:none}
+  .menu-toggle {display:block;}
+  .nav {
+    display:none;
+    flex-direction:column;
+    background: var(--primary);
+    position:absolute;
+    top:64px;
+    left:0;
+    width:100%;
+    padding:10px;
+  }
+  .nav.show {display:flex;}
 }
